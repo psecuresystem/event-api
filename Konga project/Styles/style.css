@@ -1,0 +1,839 @@
+html{
+    background-color: rgb(230, 223, 223);
+}
+nav{
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+nav ul li{
+    display: inline-block;
+    margin: 7px 35px 0px 35px;
+    list-style: none;
+}
+.menu .ksf{
+    display: none;
+}
+.nav2{
+    background-color: rgb(237, 1, 127);
+    height: 10vh;
+}
+.nav2 ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+}
+.nav2 > ul > li{
+    width: 75px;
+    cursor: pointer;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+.nav2 ul li:hover,.nav3 ul li:hover{
+    background-color: #fff;
+}
+.nav2 ul div{
+    transform: translateY(10%);
+    width: 45%;
+    display: flex;
+}
+.nav2 ul div input{
+    width: 90%;
+    height: 7vh;
+    margin: 0;
+}
+.nav2 ul div svg{
+    background-color: rgb(251, 161, 0);
+    height: 7.8vh;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    margin: 0;
+}
+#ham{
+    display: none;
+}
+.hamburger{
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 5vh;  
+  width: 5vw;
+  display: none;
+  transform: translateX(5.3vw);
+}
+.line{
+    height: 0.5em;
+    width: 2em;
+    background: #000;
+    transition: transform 0.5s ease, width 0.5s ease;
+}
+.help ul{
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+.help ul li:hover{
+    background-color: rgba(49, 47, 47, 0.349);
+}
+.help{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.help:hover ul{
+    display: inline-block;
+    list-style: none;
+    width: 30vw;
+    height: 23vh;
+    position: absolute;
+    top:100%;
+    left:0%;
+    background-color: #fff;
+    z-index: 100;
+}
+.help ul li{
+    width: 80%;
+    padding: 2vh;
+}
+.nav2 button{
+    height:50%;
+}
+nav ul li img{
+    height:20px;
+}
+.nav3{
+    overflow: hidden;
+    display: flex;
+    background-color: rgb(148, 0, 79);
+}
+.nav3 ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style: none;
+    /* align-items: center; */
+    overflow: hidden;
+}
+.nav3 li{
+    padding:0.5vw;
+    display: flex;
+    align-items: center;
+}
+.dropdown{
+    width: 100vw;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    transition:all 0.5s ease;
+    padding-bottom: 30vh;
+}
+.dropdown div,.dropdown ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.dropdown ul{
+    flex-direction: column;
+}
+.dropdown button{
+    width: 46%;
+    height: 4.5vh;
+    color: rgb(237, 1, 127);
+    border:1px solid rgb(237, 1, 127);
+    margin: 1rem 0rem 1rem 0rem;
+}
+.dropdown div div{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    border: 0.5px solid rgb(226, 226, 226);
+    padding: 1rem;
+}
+.dropdown ul,.dropdown ul li{
+    border: 0.5px solid rgb(226, 226, 226);
+    border-left: none;
+    list-style: none;
+}
+.dropdown ul li{
+    padding: 1rem;
+}
+.dropdown h4{
+    margin: 0;
+}
+.slider{
+    width: 65.5vw;
+    min-width: 10vw;
+    height: 60vh;
+    margin:20px;
+    margin-right: 0px;
+    display: inline-block;
+}
+.slider img{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    min-width: 10vw;
+}
+.img1{
+    animation:slider1 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes slider1{
+    10%{
+        z-index: 97;
+    }
+    20%{
+        z-index:96;
+    }
+    100%{
+        z-index: 97;
+    }
+}
+.img2{
+    animation:slider2 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes slider2{
+    20%{
+        z-index: 97;
+    }
+    30%{
+        z-index:96;
+    }
+}
+.img3{
+    animation:slider3 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes slider3{
+    30%{
+        z-index: 97;
+    }
+    40%{
+        z-index:96;
+    }
+}
+.img4{
+    animation:slider4 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes slider4{
+    40%{
+        z-index: 97;
+    }
+    50%{
+        z-index:96;
+    }
+}
+.img5{
+    animation:slider5 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes slider5{
+    50%{
+        z-index: 97;
+    }
+    60%{
+        z-index:96;
+    }
+}
+.img6{
+    animation:slider6 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes slider6{
+    60%{
+        z-index: 97;
+    }
+    70%{
+        z-index:96;
+    }
+}
+.img7{
+    animation:slider7 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes slider7{
+    70%{
+        z-index: 97;
+    }
+    80%{
+        z-index:96;
+    }
+}
+.img8{
+    animation:slider8 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes slider8{
+    80%{
+        z-index: 97;
+    }
+    90%{
+        z-index:96;
+    }
+}
+.img9{
+    animation:slider9 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes slider9{
+    90%{
+        z-index: 97;
+    }
+    100%{
+        z-index:96;
+    }
+}
+main{
+    position: relative;
+}
+.left-arrow{
+    position: absolute;
+    top:25vh;
+    left:5vw;
+    z-index: -10;
+}
+.right-arrow{
+    position: absolute;
+    top:25vh;
+    left:58vw;
+    z-index: -10;
+}
+.slider:hover ~ .left-arrow,.slider:hover ~ .right-arrow,.right-arrow:hover,.left-arrow:hover~.right-arrow,.left-arrow:hover,.right-arrow:hover{
+    z-index: 99;
+}
+.lazyloaded{
+    width:46%;
+    height:29.5vh;
+    display: inline-block;
+}
+.e{
+    display: inline-block;
+}
+.cont{
+    display: flex;
+}
+.cont2{
+    margin:20px 0% 20px 0.5%;
+    margin-right: 0px;
+}
+.card-cont{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card{
+    width:14.5vw;
+    margin: 0;
+}
+.ksf{
+    width: 7vw;
+    height: 7vh;
+}
+.c2{
+    background-color: #fff;
+    padding:1.5% 0 1.5% 0;
+    margin: 1.5%;
+    display: flex;
+    width: fit-content;
+    overflow: scroll;
+}
+.card2{
+    width: 12vw;
+    padding:1.9%;
+}
+.c3{
+    display: block;
+    padding: 1vh 0.2vw 1vh 0.4vw;
+}
+.c3 h3{
+    margin: 0;
+    padding:1vw;
+    border-bottom: 1px solid black;
+}
+span{
+    text-decoration: line-through;
+    text-decoration-style: double;
+}
+h5{
+    color:rgb(51, 178, 123);
+}
+.svg{
+    position: absolute;
+    top:2vh;
+    left:97vw;
+}
+.advert{
+    height: 10vh;
+    width: 98vw;
+    display: block;
+}
+#advert:target{
+    display: none;
+}
+#advert:target + .sv{
+    display: none;
+}
+.card3{
+    transition: box-shadow 1s;
+    margin:1.5vw;
+    border-radius: 5px;
+    max-width: 100vw;
+    width: max-content;
+}
+.card3:hover{
+    box-shadow: 0 0 1px rgb(43, 42, 42);
+}
+.full{
+    width: 100%;
+}
+.parent{
+    display: flex;
+    justify-content: space-evenly;
+}
+.half{
+    width:48%;
+    border-radius: 1vw;
+}
+.ads{
+    width:95%;
+    border-radius: 1vw;
+}
+.shop{
+    color:rgb(139, 5, 77);
+}
+.desc{
+    color:rgb(90, 95, 102);
+    font-size: 18px;
+    font-weight: 700;
+}
+.circle{
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    background-color: rgb(121, 124, 129);
+    display: inline-block;
+    z-index: 98;
+    margin: 1.5em;
+    border-radius: 50%;
+    top:54vh;
+    left:20vw;
+    animation:circle1 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes circle1 {
+    10%{
+        background-color: #fff;
+    }
+    20%{
+        background-color: rgb(121, 124, 129);
+    }
+}
+.circle:hover{
+    background-color: #fff;
+}
+.circle2{
+    transform: translateX(2em);
+    animation:circle2 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes circle2 {
+    20%{
+        background-color: #fff;
+    }
+    30%{
+        background-color: rgb(121, 124, 129);
+    }
+}
+.circle3{
+    transform: translateX(4em);
+    animation:circle3 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes circle3 {
+    30%{
+        background-color: #fff;
+    }
+    40%{
+        background-color: rgb(121, 124, 129);
+    }
+}
+.circle4{
+    transform: translateX(6em);
+    animation:circle4 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes circle4 {
+    40%{
+        background-color: #fff;
+    }
+    50%{
+        background-color: rgb(121, 124, 129);
+    }
+}
+.circle5{
+    transform: translateX(8em);
+    animation:circle5 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes circle5 {
+    50%{
+        background-color: #fff;
+    }
+    60%{
+        background-color: rgb(121, 124, 129);
+    }
+}
+.circle6{
+    transform: translateX(10em);
+    animation:circle6 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes circle6 {
+    60%{
+        background-color: #fff;
+    }
+    70%{
+        background-color: rgb(121, 124, 129);
+    }
+}
+.circle7{
+    transform: translateX(12em);
+    animation:circle7 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes circle7 {
+    70%{
+        background-color: #fff;
+    }
+    80%{
+        background-color: rgb(121, 124, 129);
+    }
+}
+.circle8{
+    transform: translateX(14em);
+    animation: circle8 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes circle8 {
+    80%{
+        background-color: #fff;
+    }
+    90%{
+        background-color: rgb(121, 124, 129);
+    }
+}
+.circle9{
+    transform: translateX(16em);
+    animation:circle9 20s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes circle9 {
+    90%{
+        background-color: #fff;
+    }
+    100%{
+        background-color: rgb(121, 124, 129);
+    }
+}
+.c4{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding:0% 15% 0% 15%;
+}
+.c4 img{
+    width: 7rem;
+    height: 7rem;
+}
+.c5 div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.deals{
+    display: flex;
+    width: max-content;
+}
+.c5 h3{
+    display: block;
+}
+.deals img{
+    width: 40%;
+    height: 10vh;
+}
+.deals div{
+    display: flex;
+    flex-direction: column;
+}
+.deals p,.deals h2,.deals h5{
+    margin:1vh;
+}
+.deals{
+    margin-top: 3vh;
+    transition: border 2s;
+    margin:3vh;
+    padding:3vh;
+}
+.deals:hover{
+    border:0.5px solid rgb(80, 78, 78);
+    border-radius:1vh;
+}
+.div1{
+    background-color: rgb(46, 46, 46);
+    color:rgb(181, 181, 181);
+    display: flex;
+    padding-top:1vw;
+    padding-bottom: 1vw;
+}
+.div1 > div{
+    display: flex;
+    align-items: center;
+    width: 12vw;
+    margin-right:3vw;
+    margin-left:3vw;
+}
+.div1 div div{
+    display: flex;
+    flex-direction: column;
+}
+.div1 div div p{
+    margin: 0.5vh;
+}
+.div1 div svg{
+    margin-right: 1vh;
+}
+.div1 div input,.div1 div button{
+    height: 7vh;
+    transform: translateX(-1vh);
+    text-align: center;
+}
+.div1 div button{
+    background-color: rgb(237, 1, 127);
+    outline: none;
+    border: none;
+    height: 8vh;
+}
+.form{
+    width: 25vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.foot{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(12, 12, 12);
+    color: #fff;
+}
+.foot ul{
+    list-style: none;
+    width: 98%;
+}
+.download > div{
+    background-color: black;
+    width: max-content;
+    height: 8vh;
+    margin:0.9vh;
+    padding:2vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+.download div p{
+    margin: 0.5vh;
+}
+.download{
+    display: flex;
+}
+.cdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36vw;
+}
+section:last-of-type{
+    display: none;
+}
+.connect{
+    border-radius: 50%;
+    margin: 1.9vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section:last-of-type > div{
+    padding:2vh;
+    color: #fff;
+    background-color: black;
+    border-bottom: 0.1px solid white;
+    display: none;
+}
+.more{
+    padding:2vh;
+    color: #fff;
+    background-color: black;
+    border-bottom: 0.1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+section:last-of-type div > ul{
+    list-style: none;
+}
+section:last-of-type div ul > li > div{
+    border: 1px solid #fff;
+    width: 38vw;
+}
+section:last-of-type div:hover{
+    font-weight: 700;
+}
+.div2{
+    background-color: black;
+    color: #fff;
+    border-bottom: 0.1px solid white;
+    display: none;
+    justify-content: flex-start;
+}
+.div2 ul,.div2 ul li{
+    margin-left: 0;
+    padding: 0;
+    line-height: 2vh;
+    font-size: 15px;
+}
+@media screen and (max-width:800px) {
+    .cont{
+        display: block;
+    }
+    .slider{
+        width: 93%;
+        height: 50vh;
+    }
+    .circle{
+        top:42vh;
+    }
+    .lazyloaded{
+        width: 46vw;
+    }
+    .right-arrow{
+        left:80vw;
+    }
+    .deals{
+        flex-direction: column;
+    }
+    .nav2 ul li,.nav2 ul img,.nav2 ul button,.nav3,nav,.advert,.sv,.div2{
+        display: none;
+    }
+    .hamburger{
+        display: flex;
+    }
+    .nav2 ul div{
+        width: 100%;
+        height: 5vh;
+        background-color: #fff;
+        margin: 0;
+        transform: translateX(-4vw);
+    }
+    .nav2 ul div input{
+        height: 88%;
+        outline: none;
+        border:none;
+    }
+    .nav2 ul div svg{
+        height: 100%;
+        background-color: inherit;
+        padding-right:0
+    }
+    .nav2{
+        background-color: inherit;
+    }
+    .half{
+        width: 90vw;
+    }
+    .div1{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .div1 div{
+        width: 20rem;
+        margin:0.6rem;
+    }
+    .form input{
+        width: 95vw;
+    }
+    .foot{
+        display: none;
+    }
+    section:last-of-type{
+        display: block;
+    }
+    section:last-of-type div{
+        display: none;
+    }
+    section:last-of-type label{
+        display: block;
+    }
+    #more{
+        display: none;
+    }
+    #more:checked ~ .div{
+        display: block;
+    }
+    section:last-of-type .div2{
+        display: none;
+    }
+    .about:focus + .aboutul{
+        display: block;
+    }
+    .payment:focus + .paymentul{
+        display: block;
+    }
+    .buy:focus + .buyingul{
+        display: block;
+    }
+    .infor:focus + .infoul{
+        display: block;
+    }
+    .parent{
+        flex-wrap: wrap;
+    }
+    .mmm:focus + .moneyul{
+        display: block;
+    }
+    #ham:checked ~ .dropdown{
+        display: flex;
+        width: 100vw;
+        height: 100%;
+
+    }
+    .menu .ksf{
+        display: flex;
+        width: 5rem;
+        height: 3rem;
+        margin-right: 5vw;
+    }
+    .menu .fc{
+        display: flex;
+        justify-content: space-between;
+    }
+    #ham:checked ~ .hamburger .line1{
+        transform:rotate(45deg) translateY(1rem);
+        width: 4em;
+    }
+    #ham:checked ~ .hamburger .line3{
+        transform: rotate(-45deg) translateY(-1rem);
+        width: 4em;
+    }
+    #ham:checked ~ .hamburger .line2{
+        width: 0;
+    }
+}

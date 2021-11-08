@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konga clone</title>
+    <link rel="stylesheet" href="../Styles/style.css">
+    <script src='../index.js' defer></script>
+</head>
+<body>
+    <header>
+        <img id='advert' class='advert' src="../Assets/advert.webp" alt="">
+        <a class='sv' href='#advert'><svg class='svg' height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg" aria-label="close" class="b6c6f_2H5Pm" name="close" style="background-color:#494949;border-color:#494949"><path d="M8.95 8l5.853-5.854a.671.671 0 1 0-.95-.95L8 7.05 2.146 1.198a.671.671 0 1 0-.95.95L7.05 8l-5.852 5.853a.671.671 0 0 0 .948.95L8 8.948l5.854 5.854a.671.671 0 1 0 .948-.95L8.95 8z" fill="#4A4A4A" fill-rule="nonzero" stroke="#4A4A4A"></path></svg></a>
+        <nav>
+            <ul>
+                <li><img src="../Assets/travel.webp" alt=""></li>
+                <li><img src="../Assets/pay.webp" alt=""></li>
+                <li><img src="../Assets/food.webp" alt=""></li>
+                <li><img src="../Assets/drinks.webp" alt=""></li>
+                <li><img src="../Assets/drinks.webp" alt=""></li>
+                <li><img src="../Assets/logistics.webp" alt=""></li>
+                <li><img src="../Assets/groceries.webp" alt=""></li>
+            </ul>
+        </nav>
+        <div class="menu">
+            <div class='fc'>
+                <input type='checkbox' id='ham'>
+                <label for='ham' class='hamburger'>
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </label>
+                <img src="../Assets/ksf.png" class='ksf'>
+            </div>
+            <div class='dropdown'>
+                <div>
+                    <button>Login</button>
+                    <button>Sign up</button>
+                </div>
+                <div>
+                    <div>My cart</div>
+                    <div>Track orders</div>
+                </div>
+                <div>
+                    <div>Sell on konga</div>
+                    <div>Physical stores</div>
+                </div>
+                <ul>
+                    <li><h4>Categories</h4></li>
+                    <li>Computers and accessories</li>
+                    <li>Phones and tablets</li>
+                    <li>Electronics</li>
+                    <li>Konga fashion</li>
+                    <li>Home and Fashion</li>
+                    <li>Baby, Kids and Toys</li>
+                    <li>Other Categories</li>
+                    <li>App only deals</li>
+                    <li>Intel Affordability Campaign</li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav2">
+            <ul>
+                <img src="../Assets/ksf.png" class='ksf'>
+                <li>Store Locator</li>
+                <li>Sell on konga</li>
+                <div id='search'>
+                    <input type='text' placeholder="Search for products, brands and categories"/>
+                    <svg height="15" viewBox="0 0 15 15" width="15" xmlns="http://www.w3.org/2000/svg" aria-label="search" class="" name="search"><path d="M6.222 0C2.8 0 0 2.794 0 6.216s2.8 6.222 6.222 6.222a6.174 6.174 0 0 0 3.538-1.121l3.364 3.357a1.091 1.091 0 0 0 1.555 0 1.095 1.095 0 0 0 0-1.549l-3.363-3.364a6.164 6.164 0 0 0 1.12-3.545C12.437 2.794 9.638 0 6.223 0zm0 2.19a4.007 4.007 0 0 1 4.018 4.026 4.007 4.007 0 0 1-4.018 4.025 4.008 4.008 0 0 1-4.025-4.025A4.008 4.008 0 0 1 6.222 2.19z" fill="#ed017f" fill-rule="nonzero"></path></svg>
+                </div>
+                <li class='help'>
+                    <a><svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" aria-label="question-circle" class="_8445e_3mKy6" name="question-circle"><path clip-rule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="white" fill-rule="evenodd" opacity="0.3"></path><path clip-rule="evenodd" d="M10.591 13.209V14.868H11.851C14.392 14.868 16.387 12.915 16.387 10.395C16.387 7.875 14.392 5.922 11.851 5.922C9.31 5.922 7.336 7.875 7.336 10.395H9.121C9.121 8.799 10.234 7.581 11.851 7.581C13.447 7.581 14.602 8.799 14.602 10.395C14.602 11.991 13.447 13.209 11.851 13.209H10.591ZM12 16C11.4477 16 11 16.4477 11 17C11 17.5523 11.4477 18 12 18C12.5523 18 13 17.5523 13 17C13 16.4477 12.5523 16 12 16Z" fill="white" fill-rule="evenodd"></path></svg>Help<svg height="13" viewBox="0 0 11 7" width="11" aria-label="chevron-down" class="a391f_3X97l" name="chevron-down"><path d="M5.611 5.856a.464.464 0 0 1-.33.144.464.464 0 0 1-.332-.144L1.142 2.005a.466.466 0 0 1 0-.67.454.454 0 0 1 .662 0L5.28 4.852l3.666-3.708a.454.454 0 0 1 .662 0c.19.167.19.478 0 .67L5.611 5.855z" fill="#9A0052" fill-rule="evenodd" stroke="#9A0052" stroke-width=".6"></path></svg></a>
+                    <ul>
+                        <li>FAQ's</li>
+                        <li>Contact us</li>
+                        <li>Track Order</li>
+                    </ul>
+                </li>
+                <li>Login / Signup</li>
+                <button>
+                    <a><svg height="15" viewBox="0 0 17 15" width="17" xmlns="http://www.w3.org/2000/svg" aria-label="cart" class="" name="cart"><path d="M15.814 12.856a2.144 2.144 0 1 0-4.287 0 2.144 2.144 0 0 0 4.287 0zm-2.791 0a.646.646 0 1 1 1.288 0 .646.646 0 0 1-1.286 0h-.002zm2.438-10.143V2.71a1.498 1.498 0 0 1 1.454 1.857l-1.022 4.14a1.872 1.872 0 0 1-1.818 1.424H6.482c-.867 0-1.62-.593-1.822-1.436L3.003 1.784a.374.374 0 0 0-.363-.286H.749A.749.749 0 0 1 .749 0h1.889c.866 0 1.62.594 1.822 1.436l1.656 6.912c.041.168.191.286.364.287h7.595a.374.374 0 0 0 .363-.285l1.023-4.14H9.74a.749.749 0 1 1 0-1.497h5.72zM6.403 15a2.144 2.144 0 1 1 0-4.287 2.144 2.144 0 0 1 0 4.287zm0-2.791v.001a.646.646 0 1 0 0-.002z" fill="#FFF" fill-rule="nonzero"></path></svg><span>My Cart</span><span class="fccb0_2PhkY">0</span></a>
+                </button>
+            </ul>
+        </div>
+        <div class="nav3">
+            <ul>
+                <li>
+                    <a class="ef511_2c5_i">All Categories<svg height="10" viewBox="0 0 13 10" width="13" xmlns="http://www.w3.org/2000/svg" aria-label="menu" class="" name="menu"><path d="M0 1.154C0 .517.517 0 1.154 0h10a1.154 1.154 0 1 1 0 2.308h-10A1.154 1.154 0 0 1 0 1.154zm11.154 2.692h-10a1.154 1.154 0 1 0 0 2.308h10a1.154 1.154 0 1 0 0-2.308zm0 3.846h-10a1.154 1.154 0 1 0 0 2.308h10a1.154 1.154 0 1 0 0-2.308z" fill="#FFF" fill-rule="nonzero"></path></svg></a>
+                </li>
+                <li>
+                    Computers and Accessories
+                </li>
+                <li>
+                    Phone and tablets
+                </li>
+                <li>
+                    Electronics
+                </li>
+                <li>
+                    Konga fashion
+                </li>
+                <li>Home and kitchen</li>
+                <li>Baby, Kids and toys</li>
+                <li>Other Cathegories</li>
+
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class='cont'>
+            <div>
+                <div class="circle circle1"></div>
+                <div class="circle circle2"></div>
+                <div class="circle circle3"></div>
+                <div class="circle circle4"></div>
+                <div class="circle circle5"></div>
+                <div class="circle circle6"></div>
+                <div class="circle circle7"></div>
+                <div class="circle circle8"></div>
+                <div class="circle circle9"></div>
+                <div class="slider">
+                    <img src="../Assets/is1.webp" alt="" class="img1">
+                    <img src="../Assets/is2.webp" alt="" class="img2">
+                    <img src="../Assets/is3.webp" alt="" class="img3">
+                    <img src="../Assets/is4.webp" alt="" class="img4">
+                    <img src="../Assets/is5.webp" alt="" class="img5">
+                    <img src="../Assets/is6.webp" alt="" class="img6">
+                    <img src="../Assets/is7.webp" alt="" class="img7">
+                    <img src="../Assets/is8.webp" alt="" class="img8">
+                    <img src="../Assets/is9.webp" alt="" class="img9">
+                </div>
+                <svg height="79" viewBox="0 0 79 79" width="79" aria-label="Previous slide" class="left-arrow" name="left-arrow"><defs><circle cx="28.5" cy="28.5" id="b" r="28.5"></circle><filter filterUnits="objectBoundingBox" height="161.4%" id="a" width="161.4%" x="-30.7%" y="-27.2%"><feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5.5"></feGaussianBlur><feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.238337862 0"></feColorMatrix></filter></defs><g fill="none" fill-rule="evenodd"><g transform="matrix(-1 0 0 1 68 9)"><use fill="#000" filter="url(#a)" xlink:href="#b"></use><use fill="#FFF" xlink:href="#b"></use></g><path d="M42.326 46.316a.668.668 0 0 0 0-.9L34.92 37.51l7.406-7.924a.668.668 0 0 0 0-.899.568.568 0 0 0-.84 0l-7.812 8.358a.671.671 0 0 0 0 .9l7.812 8.356a.556.556 0 0 0 .84.016z" fill="#7E859B" fill-rule="nonzero" stroke="#7E859B" stroke-width="3"></path></g></svg>
+                <svg height="79" viewBox="0 0 79 79" width="79" aria-label="Next slide" class="right-arrow" name="right-arrow"><defs><circle cx="28.5" cy="28.5" r="28.5"></circle><filter filterUnits="objectBoundingBox" height="161.4%" width="161.4%" x="-30.7%" y="-27.2%"><feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5.5"></feGaussianBlur><feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.238337862 0"></feColorMatrix></filter></defs><g fill="none" fill-rule="evenodd"><g transform="translate(11 9)"><use fill="#000" filter="url(#a)" xlink:href="#b"></use><use fill="#FFF" xlink:href="#b"></use></g><path d="M36.674 46.316a.668.668 0 0 1 0-.9l7.406-7.907-7.406-7.924a.668.668 0 0 1 0-.899.568.568 0 0 1 .84 0l7.812 8.358a.671.671 0 0 1 0 .9l-7.812 8.356a.556.556 0 0 1-.84.016z" fill="#7E859B" fill-rule="nonzero" stroke="#7E859B" stroke-width="3"></path></g></svg>
+            </div>
+            <div class='cont2'>
+                <div class='e'>
+                    <img src="../Assets/img1.webp" class='lazyloaded'>
+                    <img src="../Assets/img2.webp" alt="drinks" class="f5e10_VzEXF e48c0_3MYvH lazyloaded ">
+                </div>
+                <div class='e'>
+                    <img class='lazyloaded' src="../Assets/img3.jpeg">
+                    <img src='../Assets/img4.webp' class="lazyloaded">
+                </div>
+            </div>
+        </div>
+        <div class='card-cont'>
+            <img class='card' src="../Assets/card1.webp">
+            <img class='card' src="../Assets/card2.webp" alt="">
+            <img class='card' src="../Assets/card3.webp" alt="">
+            <img class='card' src="../Assets/card4.webp" alt="">
+            <img class='card' src="../Assets/card5.webp" alt="">
+            <img class='card' src="../Assets/card6.webp" alt="">
+        </div>
+        <div class="c2">
+            <img src="../Assets/groceries2.webp" alt="" class="card card2">
+            <img src="../Assets/furniture.webp" alt="" class="card card2">
+            <img src="../Assets/decor.webp" alt="" class="card card2">
+            <img src="../Assets/inverter.webp" alt="" class="card card2">
+            <img src="../Assets/theater.webp" alt="" class="card card2">
+            <img src="../Assets/blender.webp" alt="" class="card card2">
+        </div>
+        <div class='c2 c3'>
+            <h3>Sponsored Products</h3>
+            <div class="c2">
+                <div class="card card2 card3">
+                    <img src="../Assets/mil.webp" alt="" class="card card2">
+                    <p>1 million lucky edition</p>
+                    <h2><span>N</span>30,400</h2>
+                    <h5>You save <span>N</span>12,600</h5>
+                </div>
+                <div class="card card2 card3">
+                    <img src="../Assets/mask.webp" alt="" class="card card2">
+                    <p>Disposable face mask</p>
+                    <h2><span>N</span>12,500</h2>
+                    <h5>You save <span>N</span>2,250</h5>
+                </div>
+
+                <div class="card card2 card3">
+                    <img src="../Assets/linux.webp" alt="" class="card card2">
+                    <p>Windows 10 proffessional lic...</p>
+                    <h2><span>N</span>4,999</h2>
+                    <h5>You save <span>N</span>1</h5>
+                </div>
+
+                <div class="card card2 card3">
+                    <img src="../Assets/superlife.webp" alt="" class="card card2">
+                    <p>Super life STC 30 therapy ...</p>
+                    <h2><span>N</span>60,000</h2>
+                    <h5>You save <span>N</span>40,000</h5>
+                </div>
+
+                <div class="card card2 card3">
+                    <img src="../Assets/king.webp" alt="" class="card card2">
+                    <p>Canon top rank Camera w...</p>
+                    <h2><span>N</span>150,700</h2>
+                </div>
+
+                <div class="card card2 card3">
+                    <img src="../Assets/boxing.webp" alt="" class="card card2">
+                    <p>Boxing gloves <br><br></p>
+                    <h2><span>N</span>12,599</h2>
+                </div>
+
+                <div class="card card2 card3">
+                    <img src="../Assets/super.webp" alt="" class="card card2">
+                    <p>Super life stc 30 therapy v2</p>
+                    <h2><span>N</span>15,500</h2>
+                    <h5>You save <span>N</span>10,500</h5>
+                </div>
+
+                <div class="card card2 card3">
+                    <img src="../Assets/vinegar.webp" alt="" class="card card2">
+                    <p>Apple Chicken vinegar </p>
+                    <h2><span>N</span>10,500</h2>
+                </div>
+
+                <div class="card card2 card3">
+                    <img src="../Assets/radio.webp" alt="" class="card card2">
+                    <p>Radio mp3 player<br><br></p>
+                    <h2><span>N</span>15,700</h2>
+                    <h5>You save <span>N</span>1,200</h5>
+                </div>
+
+                <div class="card card2 card3">
+                    <img src="../Assets/men.webp" alt="" class="card card2">
+                    <p>Men slippers</p>
+                    <h2><span>N</span>1,500</h2>
+                </div>
+
+            </div>
+        </div>
+        <div class="c2 c3 c5">
+            <h3>Today's deals</h3>
+            <div>
+                <div class='deals'>
+                    <img src="../Assets/t1.webp" alt="">
+                    <div>
+                        <p>Haier Thermocool 1hp Supercool P...</p>
+                        <h2><span>N</span>127,500</h2>
+                        <h5>You save <span>N</span>2,600</h5> 
+                    </div>
+                </div>
+                <div class='deals'>
+                    <img src="../Assets/t2.webp" alt="">
+                    <div>
+                        <p>Oraimo free pods 2baba t...</p>
+                        <h2><span>N</span>16,000</h2>
+                        <h5>You save <span>N</span>3,500</h5> 
+                    </div>
+                </div>
+                <div class='deals'>
+                    <img src="../Assets/t3.webp" alt="">
+                    <div>
+                        <p>Tecno pop 5 B4E3F Ram...</p>
+                        <h2><span>N</span>43,672</h2>
+                        <h5>You save <span>N</span>8,734</h5> 
+                    </div>
+                </div>
+                <div class='deals'>
+                    <img src="../Assets/t4.webp" alt="">
+                    <div>
+                        <p>Scan frost 32-inch LED television</p>
+                        <h2><span>N</span>82,080</h2>
+                        <h5>You save <span>N</span>6920</h5> 
+                    </div>
+                </div>
+                <div class='deals'>
+                    <img src="../Assets/t5.webp" alt="">
+                    <div>
+                        <p>Fifa 22 - ps5</p>
+                        <h2><span>N</span>36,499</h2>
+                    </div>
+                </div>
+                <div class='deals'>
+                    <img src="../Assets/t6.webp" alt="">
+                    <div>
+                        <p>Sonitec 18 rechargable fan with...</p>
+                        <h2><span>N</span>127,500</h2>
+                        <h5>You save <span>N</span>2,600</h5> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c2 c3">
+            <img class='full' src="../Assets/ad1.webp" alt="">
+        </div>
+        <div class="c2 c3 parent">
+            <img class='half' src="../Assets/ad2.webp" alt="">
+            <img src="../Assets/ad3.webp" alt="" class="half">
+        </div>
+        <div class="c2 c3 parent">
+            <div>
+                <img class='ads' src="../Assets/ad4.webp" alt="">
+                <p class='desc'>Achieve farm fit goals<br><br></p>
+                <p>Get up to 50% off any item you want</p>
+                <p class="shop">Shop now ></p>
+            </div>
+            <div>
+                <img class='ads' src="../Assets/ad5.webp" alt="">
+                <p class='desc'>Top deals on beddings and mattresses</p>
+                <p>Up to 50% off</p>
+                <p class="shop">Shop now ></p>
+            </div>
+            <div>
+                <img class='ads' src="../Assets/ad6.webp" alt="">
+                <p class='desc'>Baby wears and accessories<br><br></p>
+                <p>Baby essentials at high discount</p>
+                <p class="shop">Shop now ></p>
+            </div>
+            <div>
+                <img class='ads' src="../Assets/ad7.webp" alt="">
+                <p class='desc'>Top deals on televisions<br><br></p>
+                <p>Get the tv you want at bargain deals</p>
+                <p class="shop">Shop now ></p>
+            </div>
+        </div>
+        <div class='c2 c3 c4'>
+            <img src="../Assets/s1.webp" alt="" class="sponsor">
+            <img src="../Assets/s2.webp" alt="" class="sponsor">
+            <img src="../Assets/s3.webp" alt="" class="sponsor">
+            <img src="../Assets/s4.webp" alt="" class="sponsor">
+            <img src="../Assets/s5.webp" alt="" class="sponsor">
+            <img src="../Assets/s6.webp" alt="" class="sponsor">
+            <img src="../Assets/s7.webp" alt="" class="sponsor">
+            <img src="../Assets/s8.webp" alt="" class="sponsor">
+            <img src="../Assets/s9.webp" alt="" class="sponsor">
+            <img src="../Assets/s10.webp" alt="" class="sponsor">
+            <img src="../Assets/s11.webp" alt="" class="sponsor">
+            <img src="../Assets/s12.webp" alt="" class="sponsor">
+        </div>
+        <div class="c2 c3">
+            <h3 style="border-bottom: none;">Online Shopping on Konga.com – Nigeria’s Largest Online Mall</h3>
+            <p style='padding: 1vh 0.5vw 1vh 0.7vw'>Konga.com is Nigeria’s number one online Shopping destination.We pride ourselves in having everything you could possibly need for life and living at the best prices than anywhere else. Our access to Original Equipment Manufacturers and premium sellers gives us a wide range of products at very low prices. Some of our popular categories include electronics, mobile phones, computers, fashion, beauty products, home and kitchen, Building and construction materials and a whole lot more from premium brands. Some of our other categories include Food and drinks, automotive and industrial, books, musical equipment, babies and kids items, sports and fitness, to mention a few. To make your shopping experience swift and memorable, there are also added services like gift vouchers, consumer promotion activities across different categories and bulk purchases with hassle-free delivery. Enjoy free shipping rates for certain products and with the bulk purchase option, you can enjoy low shipping rates, discounted prices and flexible payment. When you shop on our platform, you can pay with your debit card or via KongaPay, which is a convenient and secured payment solution. Get the best of lifestyle services online. Don't miss out on the biggest sales online which takes place on special dates yearly</p>
+        </div>
+    </main>
+    <footer>
+        <section class="div1">
+            <div>
+                <svg height="40px" version="1.1" viewBox="0 0 40 40" width="40px" aria-label="email-support" class="" name="email-support"><g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g fill="#FFFFFF" transform="translate(-592.000000, -519.000000)"><g><g><g transform="translate(592.000000, 519.000000)"><path d="M20,40 C8.954305,40 0,31.045695 0,20 C0,8.954305 8.954305,0 20,0 C31.045695,0 40,8.954305 40,20 C40,31.045695 31.045695,40 20,40 Z M12.7263828,17.5581092 C12.9539141,17.7250061 13.6397773,18.2206903 14.7840078,19.0449059 C15.9282734,19.8691216 16.8048594,20.5037464 17.4138008,20.9488171 C17.4807031,20.9976034 17.6228398,21.1036544 17.8402813,21.2671162 C18.0577578,21.4306876 18.2384609,21.5628676 18.38225,21.6636928 C18.5261445,21.7644814 18.7000977,21.8775488 18.9042852,22.0027124 C19.1084023,22.1277663 19.3008125,22.2218308 19.4814805,22.284102 C19.6621836,22.3468847 19.829457,22.3779838 19.9833359,22.3779838 L19.9934258,22.3779838 L20.0035508,22.3779838 C20.1574297,22.3779838 20.3247734,22.3468482 20.5054766,22.284102 C20.6860742,22.2218308 20.8786602,22.1276567 21.0826016,22.0027124 C21.2866484,21.8774027 21.4606016,21.7644448 21.6044961,21.6636928 C21.7483906,21.5628676 21.9289531,21.4306876 22.1465,21.2671162 C22.3639063,21.1035082 22.5062188,20.9976034 22.5731211,20.9488171 C23.1886367,20.5037464 24.7546016,19.3734009 27.2705234,17.5578899 C27.7589844,17.2033025 28.1670781,16.7754442 28.4949102,16.2746073 C28.8229883,15.7739896 28.9868516,15.2488143 28.9868516,14.6993738 C28.9868516,14.2402337 28.8278398,13.8472019 28.509957,13.5203149 C28.1921094,13.1933548 27.8156563,13.0299662 27.3808438,13.0299662 L12.6059023,13.0299662 C12.0906875,13.0299662 11.6941953,13.2107864 11.4164961,13.5724268 C11.138832,13.9341403 11,14.3862639 11,14.9287611 C11,15.3669614 11.1840781,15.8418155 11.5520586,16.3530309 C11.9200039,16.8642829 12.3115742,17.2660122 12.7263828,17.5581092 Z M27.983,18.6743853 C25.7884063,20.2184101 24.122,21.4183722 22.9845898,22.2740158 C22.6031797,22.5660397 22.2937695,22.7940018 22.0561484,22.9573539 C21.8185273,23.1208157 21.5025078,23.2877492 21.1076328,23.4580812 C20.7128984,23.6286691 20.3450234,23.7137072 20.0036914,23.7137072 L19.9934609,23.7137072 L19.9833711,23.7137072 C19.6421094,23.7137072 19.2740234,23.6286691 18.8792891,23.4580812 C18.4845547,23.2877492 18.1683242,23.1208157 17.9307734,22.9573539 C17.693293,22.7940018 17.3837773,22.5660397 17.0024023,22.2740158 C16.0989922,21.5854518 14.4361719,20.3854166 12.0138711,18.6743853 C11.6323555,18.4102445 11.2944336,18.1074767 11,17.7667029 L11,26.0507025 C11,26.5100618 11.1571836,26.9028744 11.4717266,27.2297979 C11.7861992,27.556831 12.1643398,27.7202928 12.6060078,27.7202928 L27.3809844,27.7202928 C27.8225469,27.7202928 28.2006523,27.556831 28.5151602,27.2297979 C28.8297734,26.9027647 28.9868867,26.5100984 28.9868867,26.0507025 L28.9868867,17.7667029 C28.6990977,18.1004236 28.3646211,18.4031915 27.983,18.6743853 Z"></path></g></g></g></g></g></svg>
+                <div>
+                    <p>Email support</p>
+                    <p>Help@konga.com</p>
+                </div>
+            </div>
+            <div>
+                <svg height="40px" version="1.1" viewBox="0 0 40 40" width="40px" aria-label="phone-support" class="" name="phone-support"><defs><path d="M20,40 C8.954305,40 0,31.045695 0,20 C0,8.954305 8.954305,0 20,0 C31.045695,0 40,8.954305 40,20 C40,31.045695 31.045695,40 20,40 Z M27.5999083,24.6474943 L25.1354957,22.1757241 C24.6446304,21.6854253 23.8317479,21.7003218 23.3237822,22.209931 L22.0822006,23.4548046 C22.0037593,23.4114483 21.9225673,23.3661609 21.8372034,23.3181149 C21.0531576,22.8824368 19.9800573,22.2852874 18.8508424,21.152 C17.7182808,20.0163218 17.1222923,18.9384828 16.686533,18.1516782 C16.6405501,18.0683218 16.5964928,17.987954 16.5529857,17.9116322 L17.3862693,17.0771954 L17.7959427,16.6658391 C18.3046877,16.1554943 18.3187163,15.3405057 17.8289971,14.8487816 L15.3645845,12.3767356 C14.8748653,11.8857011 14.061616,11.9005977 13.5528711,12.4109425 L12.8583152,13.1114943 L12.8772951,13.1303908 C12.6444011,13.4284138 12.449788,13.7721379 12.3049628,14.1428046 C12.1714613,14.4956322 12.0883438,14.8323218 12.0503381,15.1697011 C11.7249284,17.8751724 12.9577077,20.3477701 16.3033123,23.7030345 C20.9279542,28.3406437 24.654808,27.9902989 24.8155874,27.9731954 C25.1657536,27.9312184 25.501341,27.8473103 25.842384,27.7144828 C26.2087794,27.5709425 26.5512894,27.376046 26.8482751,27.1429885 L26.8634499,27.1565057 L27.5670831,26.4655172 C28.0747736,25.9552644 28.0893983,25.14 27.5999083,24.6474943 Z" id="path-1"></path></defs><g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g transform="translate(-831.000000, -519.000000)"><g><g><g transform="translate(831.000000, 519.000000)"><mask fill="white" id="mask-2"><use xlink:href="#path-1"></use></mask><use fill="#FFFFFF" id="Phone" xlink:href="#path-1"></use></g></g></g></g></g></svg>
+                <div>
+                    <p>Phone support</p>
+                    <p>0708 063 5700, 0809 460 5555</p>
+                </div>
+            </div>
+            <div>
+                <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" aria-label="whatsapp-ft" class="" name="whatsapp-ft"><circle cx="12" cy="12" fill="white" r="12"></circle><path d="M14.5108 6.20433C14.6966 6.26006 14.8824 6.31579 15.0681 6.39009C15.2539 6.4644 15.4396 6.5387 15.6068 6.63158C15.774 6.70588 15.9598 6.79876 16.1084 6.91022C16.2941 7.02167 16.4427 7.13313 16.6099 7.24458C16.7585 7.35604 16.9071 7.48607 17.0557 7.63467C17.2043 7.76471 17.3344 7.89474 17.4644 8.04334C17.5944 8.19195 17.7059 8.35913 17.8359 8.50774C17.9474 8.67492 18.0588 8.84211 18.1517 9.00929C18.2446 9.17647 18.3375 9.34365 18.4118 9.52941C18.5046 9.71517 18.5789 9.90093 18.6347 10.0867C18.6904 10.2724 18.7461 10.4582 18.8019 10.644C18.839 10.8483 18.8762 11.0341 18.8947 11.2198C18.9319 11.4241 18.9505 11.6285 18.9505 11.8142C18.9505 12.0186 18.9505 12.2043 18.9319 12.3901C18.9319 12.5944 18.8947 12.7802 18.8762 12.9845C18.839 13.1889 18.8019 13.3746 18.7461 13.5604C18.6904 13.7461 18.6347 13.9319 18.5604 14.1176C18.5046 14.3034 18.4118 14.4892 18.3375 14.6563C18.2446 14.8235 18.1517 15.0093 18.0402 15.1765C17.9474 15.3437 17.8359 15.4923 17.7059 15.6594C17.5944 15.808 17.4644 15.9567 17.3344 16.1053C17.2043 16.2539 17.0557 16.3839 16.9071 16.5139C16.7585 16.644 16.6099 16.774 16.4427 16.8854C16.2755 16.9969 16.1084 17.1084 15.9598 17.2012L15.8669 17.257C15.7183 17.3313 15.5697 17.4056 15.4211 17.4799C15.2353 17.5542 15.0495 17.6285 14.8824 17.6842C14.6966 17.7585 14.5108 17.7957 14.3065 17.8514C14.1207 17.8885 13.935 17.9257 13.7306 17.9628H13.6935H13.6749C13.5077 17.9814 13.322 18 13.1362 18C12.9505 18 12.7461 18 12.5604 18C12.3746 17.9814 12.1703 17.9628 11.9659 17.9257C11.7802 17.8885 11.5759 17.8514 11.3901 17.7957C11.2786 17.7771 11.1672 17.7399 11.0372 17.6842C10.9257 17.6471 10.7957 17.6099 10.6842 17.5542C10.5542 17.517 10.4427 17.4613 10.3313 17.4056C10.2198 17.3498 10.1084 17.2941 9.9969 17.2198C9.88545 17.1641 9.79257 17.1084 9.71827 17.0526C9.62539 16.9969 9.55108 16.9598 9.47678 16.904L9.43963 16.8669C9.36532 16.8111 9.27245 16.7554 9.19814 16.6811C9.14241 16.644 9.08669 16.6068 9.03096 16.5511L6.13313 16.6811H5.91022L5.613 16.6997H5.40867L5 16.7183L5.20433 16.3653L5.29721 16.1796L5.42724 15.9567L5.44582 15.9381L5.55728 15.7337L7.06192 13.1331C7.04334 13.0588 7.02477 12.9845 7.02477 12.9288L7.00619 12.7802L6.98762 12.6873V12.6316C6.96904 12.5201 6.96904 12.4087 6.95046 12.3158L6.96904 12.2972C6.95046 12.2043 6.95046 12.0929 6.95046 11.9814C6.95046 11.8514 6.95046 11.7214 6.96904 11.5913C6.96904 11.4799 6.98762 11.3498 7.00619 11.2198C7.02477 11.0898 7.04334 10.9598 7.06192 10.8297C7.09907 10.6997 7.11765 10.5697 7.1548 10.4582C7.21053 10.2724 7.26625 10.0867 7.34056 9.90093C7.41486 9.69659 7.48916 9.52941 7.56347 9.36223C7.65635 9.17647 7.74923 9.00929 7.86068 8.84211C7.95356 8.67492 8.06502 8.50774 8.19505 8.35913C8.3065 8.19195 8.43653 8.04334 8.56656 7.91331C8.71517 7.76471 8.8452 7.63467 8.99381 7.50464C9.14241 7.37461 9.29102 7.24458 9.4582 7.13313C9.62539 7.0031 9.79257 6.91022 9.95975 6.81734C10.1269 6.70588 10.2941 6.63158 10.4799 6.5387C10.6471 6.4644 10.8328 6.39009 11.0186 6.33437C11.2043 6.26006 11.3901 6.20433 11.5944 6.16718C11.7802 6.11146 11.9845 6.0743 12.1703 6.05573C12.356 6.03715 12.5604 6.01858 12.7647 6.01858V6C12.9505 6 13.1548 6 13.3406 6.01858C13.5449 6.03715 13.7306 6.05573 13.935 6.09288C14.1207 6.11146 14.3251 6.16718 14.5108 6.20433ZM9.06811 15.2879H9.29102H9.36532H9.40248L9.49536 15.2694L9.56966 15.3437L9.60681 15.3808L9.66254 15.418C9.73684 15.4923 9.81115 15.5666 9.88545 15.6223C9.95975 15.6966 10.0341 15.7523 10.1084 15.808C10.1827 15.8638 10.2755 15.9195 10.3684 15.9752C10.4427 16.0495 10.5356 16.0867 10.6099 16.1424C10.7028 16.1796 10.7957 16.2353 10.8885 16.2724C10.9443 16.3096 11.0186 16.3467 11.0743 16.3653H11.0929L11.1486 16.4025C11.2415 16.4396 11.3529 16.4768 11.4272 16.4954C11.5201 16.5325 11.613 16.5511 11.7245 16.5882C11.8731 16.6254 12.0402 16.6625 12.1889 16.6811C12.3375 16.7183 12.4861 16.7368 12.6533 16.7368C12.8019 16.7554 12.9505 16.7554 13.1176 16.7554C13.2663 16.7368 13.4149 16.7368 13.5635 16.7183C13.7306 16.6997 13.8793 16.6625 14.0279 16.6254C14.1765 16.5882 14.3251 16.5511 14.4737 16.4954C14.6223 16.4582 14.7709 16.4025 14.9009 16.3282C15.0495 16.2724 15.1796 16.1981 15.3282 16.1238C15.4582 16.031 15.5882 15.9567 15.7183 15.8638C15.8483 15.7709 15.9598 15.678 16.0898 15.5666C16.2012 15.4737 16.3127 15.3622 16.4241 15.2508C16.517 15.1393 16.6285 15.0279 16.7214 14.8978C16.8142 14.7678 16.9071 14.6378 16.9814 14.5077C17.0557 14.3777 17.13 14.2477 17.2043 14.0991C17.2786 13.969 17.3344 13.8204 17.3901 13.6718C17.4458 13.5418 17.483 13.3932 17.5387 13.226C17.5759 13.0774 17.613 12.9288 17.6316 12.7802C17.6502 12.6316 17.6687 12.4644 17.6873 12.3158C17.7059 12.1672 17.7059 12 17.6873 11.8514C17.6873 11.7028 17.6873 11.5728 17.6687 11.4241L17.6502 11.387C17.6316 11.2384 17.613 11.0898 17.5759 10.9226C17.5387 10.774 17.5015 10.6254 17.4458 10.4768C17.3901 10.3282 17.3344 10.1981 17.2786 10.0495C17.2229 9.9195 17.1486 9.7709 17.0557 9.64087C16.9071 9.36223 16.7214 9.10217 16.517 8.87926C16.3313 8.65635 16.1084 8.45201 15.8854 8.26625L15.8483 8.24768C15.7183 8.1548 15.5882 8.06192 15.4582 7.96904C15.3282 7.89474 15.1981 7.82043 15.0495 7.74613C14.9195 7.6904 14.7709 7.6161 14.6223 7.56037C14.4923 7.52322 14.3437 7.46749 14.1765 7.43034C14.0279 7.37461 13.8607 7.35604 13.7306 7.31889C13.5635 7.30031 13.4149 7.28173 13.2663 7.26316C13.0991 7.26316 12.9505 7.26316 12.8019 7.26316C12.6347 7.26316 12.4861 7.28173 12.3375 7.30031C12.1703 7.31889 12.0217 7.35604 11.8731 7.37461C11.7245 7.41176 11.5759 7.46749 11.4272 7.50464C11.2786 7.56037 11.13 7.6161 11 7.6904C10.8514 7.74613 10.7214 7.82043 10.5728 7.89474C10.4427 7.96904 10.3127 8.06192 10.1827 8.1548C10.0526 8.24768 9.94118 8.34056 9.81115 8.43344C9.69969 8.54489 9.58824 8.65635 9.49536 8.7678C9.3839 8.87926 9.27245 8.99071 9.17957 9.12074L9.14241 9.17647C9.06811 9.26935 8.99381 9.3808 8.9195 9.49226C8.8452 9.62229 8.7709 9.7709 8.69659 9.90093C8.62229 10.0495 8.56656 10.1981 8.51084 10.3282C8.45511 10.4768 8.41796 10.6254 8.36223 10.774C8.34365 10.8854 8.32508 10.9783 8.3065 11.0712C8.28793 11.1641 8.26935 11.257 8.25077 11.3684C8.2322 11.4799 8.2322 11.5728 8.21362 11.6656C8.21362 11.7585 8.21362 11.87 8.21362 11.9628C8.19505 12.0557 8.21362 12.1672 8.21362 12.2601C8.21362 12.3529 8.2322 12.4644 8.2322 12.5573C8.25077 12.6502 8.26935 12.743 8.28793 12.8545C8.3065 12.9474 8.32508 13.0402 8.34365 13.1331L8.36223 13.1889V13.2074V13.2446L8.3808 13.3375L8.34365 13.4118L8.32508 13.4489L8.3065 13.4861L8.28793 13.5046L8.12074 13.8204L7.97214 14.0619L7.7678 14.4334L7.21053 15.3808L8.95666 15.3065L9.04954 15.2879H9.06811Z" fill="black"></path><path clip-rule="evenodd" d="M11.0744 8.35925C10.0713 8.78649 9.75547 9.69671 9.94122 10.7184C10.0527 11.3314 10.2756 11.9444 10.6657 12.6874C11.0558 13.4305 11.5573 14.1363 12.096 14.6936C13.5449 16.1797 15.8855 15.9196 15.1053 14.6193C14.7152 14.0063 14.4923 13.5048 14.4923 13.5048C14.4923 13.5048 14.3251 13.1518 13.9908 13.3562C13.6378 13.5791 13.3035 13.8205 13.1363 13.7834C12.8762 13.7462 10.8329 11.1271 11.6131 10.7184C11.966 10.5512 12.579 10.3469 12.3189 9.91962C12.1332 9.60383 11.4644 8.4707 11.4644 8.4707C11.4644 8.4707 11.3344 8.22922 11.0744 8.35925Z" fill="black" fill-rule="evenodd"></path></svg>
+                <div>
+                    <p>Whatsapp</p>
+                    <p>0708 063 5700, 0809 460 5555</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p>Get latest deals</p>
+                    <p>Best promotions at your fingertips</p>
+                </div>
+            </div>
+            <div class='form'>
+                <input type="text" placeholder="Email address">
+                <button>Suscribe</button>
+            </div>
+        </section>
+        <section class='foot'>
+            <ul>
+                <li><h4>About konga</h4></li>
+                <li style="font-size: 11px;">Contact us</li>
+                <li style="font-size: 11px;">About us</li>
+                <li style="font-size: 11px;">Careers</li>
+                <li style="font-size: 11px;">Our blog</li>
+                <li style="font-size: 11px;">Forum</li>
+                <li style="font-size: 11px;">Terms and conditions</li>
+            </ul>
+            <ul>
+                <li><h4>Payment</h4></li>
+                <li style="font-size: 11px;">Konga pay</li>
+                <li style="font-size: 11px;">Wallet</li>
+                <li style="font-size: 11px;">Verve</li>
+                <li style="font-size: 11px;">Master card</li>
+                <li style="font-size: 11px;">Visa</li>
+            </ul>
+            <ul>
+                <li><h4>Buying on konga</h4></li>
+                <li style="font-size: 11px;">Buyer safety center</li>
+                <li style="font-size: 11px;">FAQ'S</li>
+                <li style="font-size: 11px;">Delivery</li>
+                <li style="font-size: 11px;">Konga return policy</li>
+                <li style="font-size: 11px;">Digital services</li>
+                <li style="font-size: 11px;">Bulk purchases</li>
+            </ul>
+            <ul>
+                <li><h4>More info</h4></li>
+                <li style="font-size: 11px;">Site map</li>
+                <li style="font-size: 11px;">Track my order</li>
+                <li style="font-size: 11px;">Privacy policy</li>
+                <li style="font-size: 11px;">Authentic items policy</li>
+            </ul>
+            <ul>
+                <li><h4>Make money on konga</h4></li>
+                <li style="font-size: 11px;">Make money on konga</li>
+                <li style="font-size: 11px;">Become a konga affliate</li>
+            </ul>
+            <ul>
+                <li><h4>Download and connect with us</h4></li>
+                <li class='download'>
+                    <div>
+                        <svg fill="#FFFFFF" height="28" viewBox="0 0 24 28" width="24" aria-label="ios-download" class="" name="ios-download"><path d="M20.0449 14.8775C20.0077 11.3315 23.089 9.6309 23.2266 9.54641C21.4953 7.13961 18.7983 6.8099 17.8372 6.77178C15.542 6.55101 13.3586 8.05552 12.1937 8.05552C11.0318 8.05552 9.23429 6.80443 7.33072 6.8373C4.82897 6.87263 2.5222 8.2192 1.23402 10.3477C-1.36524 14.6324 0.568375 20.98 3.10179 24.455C4.33971 26.156 5.81584 28.0665 7.75395 27.9982C9.62033 27.9275 10.3261 26.8509 12.5826 26.8509C14.839 26.8509 15.4733 27.9982 17.4484 27.963C19.4568 27.9276 20.7292 26.2295 21.9586 24.5233C23.3801 22.5499 23.9655 20.6394 24 20.5414C23.9554 20.522 20.0837 19.113 20.0449 14.8775ZM16.3336 4.4713C17.3623 3.28573 18.0566 1.6409 17.8672 0C16.3855 0.0573124 14.5895 0.937616 13.5264 2.12051C12.5725 3.16985 11.7375 4.84465 11.9612 6.45274C13.6154 6.57535 15.3039 5.65419 16.3336 4.4713Z"></path></svg>
+                        <div>
+                            <p>Download on</p>
+                            <p>The app store</p>
+                        </div>
+                    </div>
+                    <div>
+                        <svg fill="#FFFFFF" height="28" viewBox="0 0 24 28" width="24" aria-label="android-download" class="" name="android-download"><path d="M1.74937 9.12988H1.6773C0.753343 9.12988 0 9.88196 0 10.7991V18.0664C0 18.9871 0.753343 19.7367 1.6773 19.7367H1.7506C2.67455 19.7367 3.42789 18.9846 3.42789 18.0664V10.799C3.42667 9.88196 2.67215 9.12988 1.74937 9.12988Z"></path><path d="M4.23047 20.8714C4.23047 21.7156 4.92371 22.4031 5.77197 22.4031H7.41924V26.3285C7.41924 27.2503 8.17498 28 9.09654 28H9.16861C10.0938 28 10.8483 27.2492 10.8483 26.3285V22.4031H13.1504V26.3285C13.1504 27.2503 13.9085 28 14.8301 28H14.901C15.8261 28 16.5794 27.2492 16.5794 26.3285V22.4031H18.2279C19.0749 22.4031 19.7682 21.7156 19.7682 20.8714V9.39648H4.23047V20.8714Z"></path><path d="M15.8693 2.43798L17.1777 0.428075C17.2618 0.301306 17.2246 0.127975 17.096 0.0454386C16.9687 -0.0382613 16.7944 -0.00356189 16.7115 0.126755L15.355 2.20606C14.3374 1.79116 13.2008 1.55802 12.0004 1.55802C10.7989 1.55802 9.66472 1.79116 8.64468 2.20606L7.29062 0.126755C7.20774 -0.00356189 7.03228 -0.0382613 6.90372 0.0454386C6.77517 0.127919 6.73791 0.301306 6.82201 0.428075L8.13163 2.43798C5.77067 3.58944 4.17871 5.7596 4.17871 8.24898C4.17871 8.40202 4.18835 8.55268 4.20155 8.70212H19.8005C19.8137 8.55268 19.8221 8.40202 19.8221 8.24898C19.8222 5.7596 18.229 3.58944 15.8693 2.43798ZM8.38395 6.03697C7.96943 6.03697 7.63301 5.70455 7.63301 5.29088C7.63301 4.8772 7.96943 4.54595 8.38395 4.54595C8.80087 4.54595 9.1349 4.87714 9.1349 5.29088C9.1349 5.70461 8.79847 6.03697 8.38395 6.03697ZM15.6158 6.03697C15.2012 6.03697 14.8648 5.70455 14.8648 5.29088C14.8648 4.8772 15.2012 4.54595 15.6158 4.54595C16.0315 4.54595 16.3655 4.87714 16.3655 5.29088C16.3655 5.70455 16.0315 6.03697 15.6158 6.03697Z"></path><path d="M22.3216 9.12988H22.252C21.328 9.12988 20.5723 9.88196 20.5723 10.7991V18.0664C20.5723 18.9871 21.3292 19.7367 22.252 19.7367H22.3229C23.248 19.7367 24.0002 18.9846 24.0002 18.0664V10.799C24.0002 9.88196 23.2456 9.12988 22.3216 9.12988Z"></path></svg>
+                        <div>
+                            <p>Download on</p>
+                            <p>The play store</p>
+                        </div>
+                    </div>
+                </li>
+                <li><h4>Connect with us</h4></li>
+                <li class='cdiv'>
+                    <div class='connect'>
+                        <svg fill="#39579A" height="19px" version="1.1" viewBox="0 0 10 19" width="10px" xmlns="http://www.w3.org/2000/svg" aria-label="facebook" class="" name="facebook"><path d="M6.25 6.53125V4.15625C6.25 3.50075 6.81 2.96875 7.5 2.96875H8.75V0H6.25C4.17875 0 2.5 1.59481 2.5 3.5625V6.53125H0V9.5H2.5V19H6.25V9.5H8.75L10 6.53125H6.25Z"></path></svg>
+                    </div>
+                    <div class='connect'>
+                        <svg fill="#03A9F4" height="18px" version="1.1" viewBox="0 0 22 18" width="22px" aria-label="twitter" class="" name="twitter"><path d="M19 2.60922C18.3007 2.91908 17.5503 3.12923 16.7619 3.22305C17.5669 2.74101 18.1831 1.97641 18.4752 1.06814C17.7201 1.51455 16.8866 1.83869 15.9985 2.01441C15.2873 1.25575 14.2758 0.783203 13.1538 0.783203C11.0012 0.783203 9.25595 2.5285 9.25595 4.67984C9.25595 4.98496 9.29038 5.28296 9.35688 5.56793C6.118 5.40525 3.24599 3.8535 1.32379 1.49555C0.987783 2.0702 0.796634 2.7398 0.796634 3.45456C0.796634 4.80688 1.48526 6.00009 2.53007 6.69818C1.89131 6.67682 1.29054 6.50111 0.764595 6.20903V6.25771C0.764595 8.14547 2.1086 9.72098 3.89068 10.0796C3.56418 10.1674 3.21988 10.2161 2.86369 10.2161C2.612 10.2161 2.3686 10.1912 2.12996 10.1437C2.62622 11.6931 4.06522 12.8198 5.77016 12.8507C4.43684 13.8955 2.75565 14.5164 0.929634 14.5164C0.615016 14.5164 0.305118 14.4974 0 14.463C1.72512 15.5707 3.77318 16.2166 5.97438 16.2166C13.1443 16.2166 17.0636 10.2778 17.0636 5.12746L17.0505 4.62287C17.8163 4.07669 18.4787 3.39045 19 2.60922Z"></path></svg>
+                    </div>
+                    <div class='connect'>
+                        <svg height="25px" version="1.1" viewBox="0 0 25 25" width="25px" aria-label="instagram" class="" name="instagram"><defs><linearGradient id="linearGradient-1" x1="50%" x2="50%" y1="99.7089109%" y2="0.776721582%"><stop offset="0%" stop-color="#E09B3D"></stop><stop offset="30%" stop-color="#C74C4D"></stop><stop offset="60%" stop-color="#C21975"></stop><stop offset="100%" stop-color="#7024C4"></stop></linearGradient></defs><g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g fill="url(#linearGradient-1)" fill-rule="nonzero" transform="translate(-1168.000000, -232.000000)"><g><g><g transform="translate(1160.000000, 224.000000)"><g id="instagram" transform="translate(8.000000, 8.000000)"><path d="M17.5523652,0 L7.44763481,0 C3.34099166,0 0,3.34099166 0,7.44763481 L0,17.5523652 C0,21.6590083 3.34099166,25 7.44763481,25 L17.5523652,25 C21.6590083,25 25,21.6590083 25,17.5523652 L25,7.44763481 C24.9999546,3.34099166 21.658963,0 17.5523652,0 Z M22.4850009,17.5523652 C22.4850009,20.2765619 20.2765619,22.4850009 17.5523652,22.4850009 L7.44763481,22.4850009 C4.72343812,22.4850009 2.51499907,20.2765619 2.51499907,17.5523652 L2.51499907,7.44763481 C2.51499907,4.72339275 4.72343812,2.51499907 7.44763481,2.51499907 L17.5523652,2.51499907 C20.2765619,2.51499907 22.4850009,4.72339275 22.4850009,7.44763481 L22.4850009,17.5523652 Z M12.4413146,5.98591549 C8.8818018,5.98591549 5.98591549,8.88181196 5.98591549,12.4412919 C5.98591549,16.0007719 8.8818018,18.8967136 12.4413146,18.8967136 C16.0008273,18.8967136 18.8967136,16.0008172 18.8967136,12.4412919 C18.8967136,8.88176666 16.0008273,5.98591549 12.4413146,5.98591549 Z M12.4413146,16.3858315 C10.2628206,16.3858315 8.49683413,14.6198388 8.49683413,12.4413372 C8.49683413,10.2628356 10.2628659,8.49684294 12.4413146,8.49684294 C14.6198085,8.49684294 16.385795,10.2628356 16.385795,12.4413372 C16.385795,14.6197935 14.6197632,16.3858315 12.4413146,16.3858315 Z M18.8967136,7.62910798 C19.7394016,7.62910798 20.4225352,6.94597438 20.4225352,6.10328638 C20.4225352,5.26059839 19.7394016,4.57746479 18.8967136,4.57746479 C18.0540256,4.57746479 17.370892,5.26059839 17.370892,6.10328638 C17.370892,6.94597438 18.0540256,7.62910798 18.8967136,7.62910798 Z"></path></g></g></g></g></g></g></svg>
+                    </div>
+                    <div class='connect'>
+                        <svg fill="#FF3B3B" height="20px" viewBox="0 0 20 15" width="20px" aria-label="youtube" class="" name="youtube"><path d="M14.2616 0.631348H3.73837C1.67372 0.631348 0 2.30507 0 4.36972V9.63023C0 11.6949 1.67372 13.3686 3.73837 13.3686H14.2616C16.3263 13.3686 18 11.6949 18 9.63023V4.36972C18 2.30507 16.3263 0.631348 14.2616 0.631348ZM11.7334 7.25592L6.81133 9.60345C6.68017 9.666 6.52868 9.57038 6.52868 9.42509V4.5833C6.52868 4.43594 6.68415 4.34043 6.81558 4.40704L11.7377 6.90131C11.884 6.97546 11.8815 7.18532 11.7334 7.25592Z" fill="#F61C0D"></path></svg>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class='sect'>
+            <input type="checkbox" id="more">
+            <label for="more" class='more'>More Options</label>
+            <div tabindex="0" class='div about'>
+                About Konga
+            </div>
+            <div class="div2 aboutul">
+                <ul>
+                    <li style="font-size: 11px;">Contact us</li>
+                    <li style="font-size: 11px;">About us</li>
+                    <li style="font-size: 11px;">Careers</li>
+                    <li style="font-size: 11px;">Our blog</li>
+                    <li style="font-size: 11px;">Forum</li>
+                    <li style="font-size: 11px;">Terms and conditions</li>
+                </ul>
+            </div>
+            <div tabindex="0" class='div payment'>
+                Payment
+            </div>
+            <div class="div2 paymentul">
+                <ul>
+                    <li style="font-size: 11px;">Konga pay</li>
+                    <li style="font-size: 11px;">Wallet</li>
+                    <li style="font-size: 11px;">Verve</li>
+                    <li style="font-size: 11px;">Master card</li>
+                    <li style="font-size: 11px;">Visa</li>
+                </ul>
+            </div>
+            <div tabindex="0" class='div buy'>
+                Buying on konga
+            </div>
+            <div class="div2 buyingul">
+                <ul>
+                    <li style="font-size: 11px;">Buyer safety center</li>
+                    <li style="font-size: 11px;">FAQ'S</li>
+                    <li style="font-size: 11px;">Delivery</li>
+                    <li style="font-size: 11px;">Konga return policy</li>
+                    <li style="font-size: 11px;">Digital services</li>
+                    <li style="font-size: 11px;">Bulk purchases</li>
+                </ul>
+            </div>
+            <div tabindex="0" class='div infor'>
+                More info
+            </div>
+            <div class="div2 infoul">
+                <ul>
+                    <li style="font-size: 11px;">Site map</li>
+                    <li style="font-size: 11px;">Track my order</li>
+                    <li style="font-size: 11px;">Privacy policy</li>
+                    <li style="font-size: 11px;">Authentic items policy</li>
+                </ul>
+            </div>
+            <div tabindex="0" class='div mmm'>
+                Making money on konga
+            </div>
+            <div class="div2 moneyul">
+                <ul>
+                    <li style="font-size: 11px;">Become a konga affliate</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><h4>Download and connect with us</h4></li>
+                    <li class='download'>
+                        <div>
+                            <svg fill="#FFFFFF" height="28" viewBox="0 0 24 28" width="24" aria-label="ios-download" class="" name="ios-download"><path d="M20.0449 14.8775C20.0077 11.3315 23.089 9.6309 23.2266 9.54641C21.4953 7.13961 18.7983 6.8099 17.8372 6.77178C15.542 6.55101 13.3586 8.05552 12.1937 8.05552C11.0318 8.05552 9.23429 6.80443 7.33072 6.8373C4.82897 6.87263 2.5222 8.2192 1.23402 10.3477C-1.36524 14.6324 0.568375 20.98 3.10179 24.455C4.33971 26.156 5.81584 28.0665 7.75395 27.9982C9.62033 27.9275 10.3261 26.8509 12.5826 26.8509C14.839 26.8509 15.4733 27.9982 17.4484 27.963C19.4568 27.9276 20.7292 26.2295 21.9586 24.5233C23.3801 22.5499 23.9655 20.6394 24 20.5414C23.9554 20.522 20.0837 19.113 20.0449 14.8775ZM16.3336 4.4713C17.3623 3.28573 18.0566 1.6409 17.8672 0C16.3855 0.0573124 14.5895 0.937616 13.5264 2.12051C12.5725 3.16985 11.7375 4.84465 11.9612 6.45274C13.6154 6.57535 15.3039 5.65419 16.3336 4.4713Z"></path></svg>
+                            <div>
+                                <p>Download on</p>
+                                <p>The app store</p>
+                            </div>
+                        </div>
+                        <div>
+                            <svg fill="#FFFFFF" height="28" viewBox="0 0 24 28" width="24" aria-label="android-download" class="" name="android-download"><path d="M1.74937 9.12988H1.6773C0.753343 9.12988 0 9.88196 0 10.7991V18.0664C0 18.9871 0.753343 19.7367 1.6773 19.7367H1.7506C2.67455 19.7367 3.42789 18.9846 3.42789 18.0664V10.799C3.42667 9.88196 2.67215 9.12988 1.74937 9.12988Z"></path><path d="M4.23047 20.8714C4.23047 21.7156 4.92371 22.4031 5.77197 22.4031H7.41924V26.3285C7.41924 27.2503 8.17498 28 9.09654 28H9.16861C10.0938 28 10.8483 27.2492 10.8483 26.3285V22.4031H13.1504V26.3285C13.1504 27.2503 13.9085 28 14.8301 28H14.901C15.8261 28 16.5794 27.2492 16.5794 26.3285V22.4031H18.2279C19.0749 22.4031 19.7682 21.7156 19.7682 20.8714V9.39648H4.23047V20.8714Z"></path><path d="M15.8693 2.43798L17.1777 0.428075C17.2618 0.301306 17.2246 0.127975 17.096 0.0454386C16.9687 -0.0382613 16.7944 -0.00356189 16.7115 0.126755L15.355 2.20606C14.3374 1.79116 13.2008 1.55802 12.0004 1.55802C10.7989 1.55802 9.66472 1.79116 8.64468 2.20606L7.29062 0.126755C7.20774 -0.00356189 7.03228 -0.0382613 6.90372 0.0454386C6.77517 0.127919 6.73791 0.301306 6.82201 0.428075L8.13163 2.43798C5.77067 3.58944 4.17871 5.7596 4.17871 8.24898C4.17871 8.40202 4.18835 8.55268 4.20155 8.70212H19.8005C19.8137 8.55268 19.8221 8.40202 19.8221 8.24898C19.8222 5.7596 18.229 3.58944 15.8693 2.43798ZM8.38395 6.03697C7.96943 6.03697 7.63301 5.70455 7.63301 5.29088C7.63301 4.8772 7.96943 4.54595 8.38395 4.54595C8.80087 4.54595 9.1349 4.87714 9.1349 5.29088C9.1349 5.70461 8.79847 6.03697 8.38395 6.03697ZM15.6158 6.03697C15.2012 6.03697 14.8648 5.70455 14.8648 5.29088C14.8648 4.8772 15.2012 4.54595 15.6158 4.54595C16.0315 4.54595 16.3655 4.87714 16.3655 5.29088C16.3655 5.70455 16.0315 6.03697 15.6158 6.03697Z"></path><path d="M22.3216 9.12988H22.252C21.328 9.12988 20.5723 9.88196 20.5723 10.7991V18.0664C20.5723 18.9871 21.3292 19.7367 22.252 19.7367H22.3229C23.248 19.7367 24.0002 18.9846 24.0002 18.0664V10.799C24.0002 9.88196 23.2456 9.12988 22.3216 9.12988Z"></path></svg>
+                            <div>
+                                <p>Download on</p>
+                                <p>The play store</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li><h4>Connect with us</h4></li>
+                    <li class='cdiv'>
+                        <div class='connect'>
+                            <svg fill="#39579A" height="19px" version="1.1" viewBox="0 0 10 19" width="10px" xmlns="http://www.w3.org/2000/svg" aria-label="facebook" class="" name="facebook"><path d="M6.25 6.53125V4.15625C6.25 3.50075 6.81 2.96875 7.5 2.96875H8.75V0H6.25C4.17875 0 2.5 1.59481 2.5 3.5625V6.53125H0V9.5H2.5V19H6.25V9.5H8.75L10 6.53125H6.25Z"></path></svg>
+                        </div>
+                        <div class='connect'>
+                            <svg fill="#03A9F4" height="18px" version="1.1" viewBox="0 0 22 18" width="22px" aria-label="twitter" class="" name="twitter"><path d="M19 2.60922C18.3007 2.91908 17.5503 3.12923 16.7619 3.22305C17.5669 2.74101 18.1831 1.97641 18.4752 1.06814C17.7201 1.51455 16.8866 1.83869 15.9985 2.01441C15.2873 1.25575 14.2758 0.783203 13.1538 0.783203C11.0012 0.783203 9.25595 2.5285 9.25595 4.67984C9.25595 4.98496 9.29038 5.28296 9.35688 5.56793C6.118 5.40525 3.24599 3.8535 1.32379 1.49555C0.987783 2.0702 0.796634 2.7398 0.796634 3.45456C0.796634 4.80688 1.48526 6.00009 2.53007 6.69818C1.89131 6.67682 1.29054 6.50111 0.764595 6.20903V6.25771C0.764595 8.14547 2.1086 9.72098 3.89068 10.0796C3.56418 10.1674 3.21988 10.2161 2.86369 10.2161C2.612 10.2161 2.3686 10.1912 2.12996 10.1437C2.62622 11.6931 4.06522 12.8198 5.77016 12.8507C4.43684 13.8955 2.75565 14.5164 0.929634 14.5164C0.615016 14.5164 0.305118 14.4974 0 14.463C1.72512 15.5707 3.77318 16.2166 5.97438 16.2166C13.1443 16.2166 17.0636 10.2778 17.0636 5.12746L17.0505 4.62287C17.8163 4.07669 18.4787 3.39045 19 2.60922Z"></path></svg>
+                        </div>
+                        <div class='connect'>
+                            <svg height="25px" version="1.1" viewBox="0 0 25 25" width="25px" aria-label="instagram" class="" name="instagram"><defs><linearGradient id="linearGradient-1" x1="50%" x2="50%" y1="99.7089109%" y2="0.776721582%"><stop offset="0%" stop-color="#E09B3D"></stop><stop offset="30%" stop-color="#C74C4D"></stop><stop offset="60%" stop-color="#C21975"></stop><stop offset="100%" stop-color="#7024C4"></stop></linearGradient></defs><g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g fill="url(#linearGradient-1)" fill-rule="nonzero" transform="translate(-1168.000000, -232.000000)"><g><g><g transform="translate(1160.000000, 224.000000)"><g id="instagram" transform="translate(8.000000, 8.000000)"><path d="M17.5523652,0 L7.44763481,0 C3.34099166,0 0,3.34099166 0,7.44763481 L0,17.5523652 C0,21.6590083 3.34099166,25 7.44763481,25 L17.5523652,25 C21.6590083,25 25,21.6590083 25,17.5523652 L25,7.44763481 C24.9999546,3.34099166 21.658963,0 17.5523652,0 Z M22.4850009,17.5523652 C22.4850009,20.2765619 20.2765619,22.4850009 17.5523652,22.4850009 L7.44763481,22.4850009 C4.72343812,22.4850009 2.51499907,20.2765619 2.51499907,17.5523652 L2.51499907,7.44763481 C2.51499907,4.72339275 4.72343812,2.51499907 7.44763481,2.51499907 L17.5523652,2.51499907 C20.2765619,2.51499907 22.4850009,4.72339275 22.4850009,7.44763481 L22.4850009,17.5523652 Z M12.4413146,5.98591549 C8.8818018,5.98591549 5.98591549,8.88181196 5.98591549,12.4412919 C5.98591549,16.0007719 8.8818018,18.8967136 12.4413146,18.8967136 C16.0008273,18.8967136 18.8967136,16.0008172 18.8967136,12.4412919 C18.8967136,8.88176666 16.0008273,5.98591549 12.4413146,5.98591549 Z M12.4413146,16.3858315 C10.2628206,16.3858315 8.49683413,14.6198388 8.49683413,12.4413372 C8.49683413,10.2628356 10.2628659,8.49684294 12.4413146,8.49684294 C14.6198085,8.49684294 16.385795,10.2628356 16.385795,12.4413372 C16.385795,14.6197935 14.6197632,16.3858315 12.4413146,16.3858315 Z M18.8967136,7.62910798 C19.7394016,7.62910798 20.4225352,6.94597438 20.4225352,6.10328638 C20.4225352,5.26059839 19.7394016,4.57746479 18.8967136,4.57746479 C18.0540256,4.57746479 17.370892,5.26059839 17.370892,6.10328638 C17.370892,6.94597438 18.0540256,7.62910798 18.8967136,7.62910798 Z"></path></g></g></g></g></g></g></svg>
+                        </div>
+                        <div class='connect'>
+                            <svg fill="#FF3B3B" height="20px" viewBox="0 0 20 15" width="20px" aria-label="youtube" class="" name="youtube"><path d="M14.2616 0.631348H3.73837C1.67372 0.631348 0 2.30507 0 4.36972V9.63023C0 11.6949 1.67372 13.3686 3.73837 13.3686H14.2616C16.3263 13.3686 18 11.6949 18 9.63023V4.36972C18 2.30507 16.3263 0.631348 14.2616 0.631348ZM11.7334 7.25592L6.81133 9.60345C6.68017 9.666 6.52868 9.57038 6.52868 9.42509V4.5833C6.52868 4.43594 6.68415 4.34043 6.81558 4.40704L11.7377 6.90131C11.884 6.97546 11.8815 7.18532 11.7334 7.25592Z" fill="#F61C0D"></path></svg>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
